@@ -2,11 +2,24 @@
 
 int main(void)
 {
-	printf("Test main\n");
-	int fd = open("file.txt", O_RDONLY);
-	char *ligne = get_next_line(fd);
-	printf("la ligne lue : %s\n", ligne);
-	free(ligne);
-	close(fd);
+	printf("Test main\n\n");
+	int	fd;
+	char *ligne;
+	int lignes;
+
+	lignes = 1;
+	fd = open("file.txt", O_RDONLY);
+
+	while (1)
+	{
+		ligne = get_next_line(fd);
+		if (ligne == NULL)
+		{
+			printf("%d->%s\n", lignes++, ligne);
+			break;
+		}
+		printf("%d->%s\n", lignes++, ligne);
+		free(ligne);
+	}
 	return (0);
 }

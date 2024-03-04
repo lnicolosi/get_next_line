@@ -1,8 +1,8 @@
-voici-mon-texte
-il-ne-fait-pas-beaucoup-de-lignes
-il y a peut etre des fautes
-je suis dans le bus
-nous sommes le 4.1.2024
-
-un retour ligne sans texte.
-on verra si ca marche !
+voici-mon-texte$
+il-ne-fait-pas-beaucoup-de-lignes$
+il y a peut etre des fautes$
+je suis dans le bus$
+nous sommes le 4.1.2024$
+$
+un retour ligne sans texte.$
+on verra si ca marche !$
