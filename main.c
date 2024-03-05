@@ -15,10 +15,10 @@ int main(void)
 		ligne = get_next_line(fd);
 		if (ligne == NULL)
 		{
-			printf("%d->%s\n", lignes++, ligne);
+			printf("%d->%s", lignes++, ligne);
 			break;
 		}
-		printf("%d->%s\n", lignes++, ligne);
+		printf("%d->%s", lignes++, ligne);
 		free(ligne);
 	}
 	return (0);
