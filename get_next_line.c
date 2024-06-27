@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lnicolos <lnicolos@student.42lausan>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/07 16:14:02 by lnicolos          #+#    #+#             */
+/*   Updated: 2024/03/07 16:15:52 by lnicolos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
-
-void polish_list(t_list **list)
+void	polish_list(t_list **list)
 {
 	t_list	*last_node;
 	t_list	*clean_node;
@@ -26,7 +37,7 @@ void polish_list(t_list **list)
 	dealloc(list, clean_node, buf);
 }
 
-char *get_line(t_list *list)
+char	*get_line(t_list *list)
 {
 	int		str_len;
 	char	*next_str;
@@ -41,7 +52,7 @@ char *get_line(t_list *list)
 	return (next_str);
 }
 
-void append(t_list **list, char *buf)
+void	append(t_list **list, char *buf)
 {
 	t_list	*new_node;
 	t_list	*last_node;
@@ -58,7 +69,7 @@ void append(t_list **list, char *buf)
 	new_node->next = NULL;
 }
 
-void create_list(t_list **list, int fd)
+void	create_list(t_list **list, int fd)
 {
 	int		char_read;
 	char	*buf;
@@ -79,7 +90,7 @@ void create_list(t_list **list, int fd)
 	}
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	static t_list	*list = NULL;
 	char			*next_line;

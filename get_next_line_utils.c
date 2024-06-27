@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lnicolos <lnicolos@student.42lausan>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/07 16:14:25 by lnicolos          #+#    #+#             */
+/*   Updated: 2024/03/07 16:17:23 by lnicolos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 #include <stdlib.h>
 
-int found_newline(t_list *list)
+int	found_newline(t_list *list)
 {
 	int	i;
 
@@ -21,7 +33,7 @@ int found_newline(t_list *list)
 	return (0);
 }
 
-t_list *find_last_node(t_list *list)
+t_list	*find_last_node(t_list *list)
 {
 	if (NULL == list)
 		return (NULL);
@@ -30,10 +42,10 @@ t_list *find_last_node(t_list *list)
 	return (list);
 }
 
-void copy_str(t_list *list, char *str)
+void	copy_str(t_list *list, char *str)
 {
 	int	i;
-	int k;
+	int	k;
 
 	if (NULL == list)
 		return ;
@@ -56,7 +68,7 @@ void copy_str(t_list *list, char *str)
 	str[k] = '\0';
 }
 
-int len_to_newline(t_list *list)
+int	len_to_newline(t_list *list)
 {
 	int	i;
 	int	len;
@@ -82,7 +94,7 @@ int len_to_newline(t_list *list)
 	return (len);
 }
 
-void dealloc(t_list **list, t_list *clean_node, char *buf)
+void	dealloc(t_list **list, t_list *clean_node, char *buf)
 {
 	t_list	*tmp;
 
